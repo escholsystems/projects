@@ -227,9 +227,42 @@ function showCustomer(str) {
 <h4 style="position: relative;
  left:10px">Zip Code</h4>
  <form id="form" onsubmit="return false;">
-<input   style=position:absolute;top:340%;left:5%;width:40%; type="text" id="userInput">
+<input   style=position:absolute;top:80%;left:3%;width:40%; type="text" id="userInput">
 
 </form>
+<h4 style="position: relative;
+top: px;
+ left:10px">Origin</h4>
+
+ <form action=""> 
+<select name="customers" onchange="showCustomer(this.value)">
+<option value="">Select a Branch:</option>
+<option value="ALFKI">kerala</option>
+<option value="NORTS ">tamil nadu</option>
+<option value="WOLZA">karnataka</option>
+</select>
+</form>
+<script>
+function showCustomer(str) {
+  var xhttp;    
+  if (str == "") {
+    document.getElementById("txtHint").innerHTML = "";
+    return;
+  }
+  xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("txtHint").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "getcustomer.asp?q="+str, true);
+  xhttp.send();
+}
+</script>
+
+<h4 style="position: relative;
+top: px;
+ left:10px">Mobile Number</h4>
 
 </body>
 </body>
