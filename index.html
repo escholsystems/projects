@@ -122,24 +122,32 @@ body {
 <body>
 
 <style></style>
+</body>
 <body>
   <h3 style="position: relative;
-  top: px;
   left:30px;
   background-color: ">Consignor Details</h3>
  <h4 style="position: relative;
- left: 10px">Consignment No</h4>
+ text-align: left;
+ left: 20px">Consignment No</h4>
 
    <input type="text" class="form-control" id="consignmentNo" name="consignmentNo" placeholder="Consignment No" required value tabindex="1" aria-label="..."></br>
 
  <h4 style="position: relative;
+ text-align: left;
  left:10px">Consignment Date</h4>
 
 <input type="text" class="form-control" id="consignmentDate" name="consignmentDate" placeholder="Consignment Date" required value tabindex="2" aria-label="...">
-
+<br>
 <div class="container">
+
       <h4 style="position:relative;
-      left:-60px">Consigner Name</h4>
+      text-align: left;
+      left:-50px">Consigner Name</h4>
+      <div class="inner-addon right-addon">
+      <div class="form-group has-feedback"> 
+
+  <i class="glyphicon glyphicon-pencil form-control-feedback"></i>
               
       
     </a>
@@ -176,8 +184,9 @@ function showCustomer(str) {
   xhttp.send();
 }
 </script>
-
+<br>
 <h4 style="position: relative;
+text-align: left;
  left:10px">State</h4>
 <div class="col-lg-6">
     <div class="input-group">
@@ -212,9 +221,12 @@ function showCustomer(str) {
   xhttp.open("GET", "getcustomer.asp?q="+str, true);
   xhttp.send();
 }
+
 </script>
+<br>
 <h4 style="position: relative;
- left:10px">City</h4>
+text-align: left;
+ left:-620px">City</h4>
 
 <div class="col-lg-6">
     <div class="input-group">
@@ -250,16 +262,17 @@ function showCustomer(str) {
   xhttp.send();
 }
 </script>
-
+<br>
 <h4 style="position: relative;
- left:px">Zip Code</h4>
+text-align: left;
+ left:-610px">Zip Code</h4>
 
  
    <input type="text" class="form-control" id="Zip Code" name="Zip Code" placeholder="Zip Code" required value tabindex="1" aria-label="...">
 
-
+<br>
 <h4 style="position: relative;
-top: px;
+text-align: left;
  left:10px">Origin</h4>
 
  <div class="col-lg-6">
@@ -295,10 +308,10 @@ function showCustomer(str) {
   xhttp.send();
 }
 </script>
-
+<br>
 <h4 style="position: relative;
-top: px;
- left:10px">Mobile Number</h4>
+text-align: left;
+ left:-610px">Mobile Number</h4>
 
    <input type="text" class="form-control" id="Mobile Number" name="Mobile Number" placeholder="Mobile Number" required value tabindex="5" aria-label="...">
 
@@ -319,6 +332,9 @@ function showCustomer(str) {
   xhttp.send();
 }
 </script>
+
+
+
 
 
 
