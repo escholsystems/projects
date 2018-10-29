@@ -130,27 +130,36 @@ body {
  <h4 style="position: relative;
  left: 10px">Consignment No</h4>
 
-   <input type="text" class="for-control" id="consignmentNo" name="consignmentNo" placeholder="Consignment No" required value tabindex="1"></br>
+   <input type="text" class="form-control" id="consignmentNo" name="consignmentNo" placeholder="Consignment No" required value tabindex="1" aria-label="..."></br>
 
  <h4 style="position: relative;
  left:10px">Consignment Date</h4>
 
-<input type="text" class="for-control" id="consignmentDate" name="consignmentDate" placeholder="Consignment Date" required value tabindex="2">
+<input type="text" class="form-control" id="consignmentDate" name="consignmentDate" placeholder="Consignment Date" required value tabindex="2" aria-label="...">
 
 <div class="container">
       <h4 style="position:relative;
       left:-60px">Consigner Name</h4>
-      <span class="glyphicon glyphicon-pencil"></span></p>
-
-      <form action=""> 
-<select name="customers" onchange="showCustomer(this.value)">
-<option value="">Select a customer:</option>
-<option value="ALFKI">raju</option>
-<option value="NORTS ">ramu</option>
-<option value="WOLZA">raku</option>
-</select>
-</form>
-<script>
+              
+      
+    </a>
+        <div class="col-lg-6">
+    <div class="input-group">
+  <input type="text" class="form-control" id="Guest Consignor" name="Guest Consignor" placeholder="Guest Consignor" required value tabindex="3"  aria-label="...">
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">select <span class="caret"></span></button>
+<ul class="dropdown-menu dropdown-menu-right">
+          <li><a href="#">ram</a></li>
+          <li><a href="#">taj</a></li>
+          <li><a href="#">ddd </a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">choose State</a></li>
+        </ul>
+      </div><!-- /btn-group -->
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->
+        <script>
 function showCustomer(str) {
   var xhttp;    
   if (str == "") {
@@ -167,17 +176,26 @@ function showCustomer(str) {
   xhttp.send();
 }
 </script>
+
 <h4 style="position: relative;
  left:10px">State</h4>
+<div class="col-lg-6">
+    <div class="input-group">
+  <input type="text" class="form-control" id="Select State" name="Select State" placeholder="Select State " required value tabindex="3"  aria-label="...">
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" onchange="showCustomer(this.value)" aria-haspopup="true" aria-expanded="false">select <span class="caret"></span></button>
+        <ul class="dropdown-menu dropdown-menu-right">
+          <li><a href="#">Kerala</a></li>
+          <li><a href="#">Tamil Nadu</a></li>
+          <li><a href="#">karnataka</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">choose State</a></li>
+        </ul>
+      </div><!-- /btn-group -->
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->
 
-<form action=""> 
-<select name="customers" onchange="showCustomer(this.value)">
-<option value="">Select a state:</option>
-<option value="ALFKI">kerala</option>
-<option value="NORTS ">tamil nadu</option>
-<option value="WOLZA">karnataka</option>
-</select>
-</form>
 <script>
 function showCustomer(str) {
   var xhttp;    
@@ -198,14 +216,23 @@ function showCustomer(str) {
 <h4 style="position: relative;
  left:10px">City</h4>
 
-<form action=""> 
-<select name="customers" onchange="showCustomer(this.value)">
-<option value="">Select a city:</option>
-<option value="ALFKI">kerala</option>
-<option value="NORTS ">tamil nadu</option>
-<option value="WOLZA">karnataka</option>
-</select>
-</form>
+<div class="col-lg-6">
+    <div class="input-group">
+  <input type="text" class="form-control" id="Select City" name="Select City" placeholder="Select City" required value tabindex="3"  aria-label="...">
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">select <span class="caret"></span></button>
+        <ul class="dropdown-menu dropdown-menu-right">
+          <li><a href="#">kochi</a></li>
+          <li><a href="#">chennai</a></li>
+          <li><a href="#">banglure</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">Choose City</a></li>
+        </ul>
+      </div><!-- /btn-group -->
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->
+
 <script>
 function showCustomer(str) {
   var xhttp;    
@@ -225,23 +252,32 @@ function showCustomer(str) {
 </script>
 
 <h4 style="position: relative;
- left:10px">Zip Code</h4>
- <form id="form" onsubmit="return false;">
-<input   style=position:absolute;top:80%;left:3%;width:40%; type="text" id="userInput">
+ left:px">Zip Code</h4>
+
+ 
+   <input type="text" class="form-control" id="Zip Code" name="Zip Code" placeholder="Zip Code" required value tabindex="1" aria-label="...">
 
 </form>
 <h4 style="position: relative;
 top: px;
  left:10px">Origin</h4>
 
- <form action=""> 
-<select name="customers" onchange="showCustomer(this.value)">
-<option value="">Select a Branch:</option>
-<option value="ALFKI">kerala</option>
-<option value="NORTS ">tamil nadu</option>
-<option value="WOLZA">karnataka</option>
-</select>
-</form>
+ <div class="col-lg-6">
+    <div class="input-group">
+  <input type="text" class="form-control" id="Select Branch" name="Select Branch " placeholder="Select Branch" required value tabindex="3"  aria-label="...">
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">select <span class="caret"></span></button>
+        <ul class="dropdown-menu dropdown-menu-right">
+          <li><a href="#">kochi</a></li>
+          <li><a href="#">chennai</a></li>
+          <li><a href="#">banglure</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">Choose City</a></li>
+        </ul>
+      </div><!-- /btn-group -->
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->
 <script>
 function showCustomer(str) {
   var xhttp;    
@@ -263,6 +299,28 @@ function showCustomer(str) {
 <h4 style="position: relative;
 top: px;
  left:10px">Mobile Number</h4>
+
+   <input type="text" class="form-control" id="Mobile Number" name="Mobile Number" placeholder="Mobile Number" required value tabindex="1" aria-label="...">
+
+   <script>
+function showCustomer(str) {
+  var xhttp;    
+  if (str == "") {
+    document.getElementById("txtHint").innerHTML = "";
+    return;
+  }
+  xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("txtHint").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "getcustomer.asp?q="+str, true);
+  xhttp.send();
+}
+</script>
+
+
 
 </body>
 </body>
