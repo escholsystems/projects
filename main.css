@@ -49,12 +49,12 @@
 
 
 /* enable absolute positioning */
-.inner-addon { 
+.inner-addon1 { 
     position: relative; 
 }
 
 /* style icon */
-.inner-addon .glyphicon {
+.inner-addon1 .glyphicon {
   position: relative;
   top: -100px;
   padding: 10px;
