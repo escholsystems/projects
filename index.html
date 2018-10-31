@@ -45,7 +45,19 @@
 </style>
 </head>
 <body>
+<script type="text/javascript">
 
+  // Original JavaScript code by Chirp Internet: www.chirp.com.au
+  // Please acknowledge use of this code by including this header.
+
+  function getCookie(name)
+  {
+    var re = new RegExp(name + "=([^;]+)");
+    var value = re.exec(document.cookie);
+    return (value != null) ? unescape(value[1]) : null;
+  }
+
+</script>
 <div class="topnav">
   <a class="active" href="#Matrix Logistics">Matrix Logistic
   </a>
@@ -56,7 +68,15 @@
   <a href="#Settings">settings</a>
   <a href="#Logout">Logout</a>
 
-
+<script>
+function validateForm() {
+    var x = document.forms["myForm"]["fname"].value;
+    if (x == ""){
+        alert("Name must be filled out");
+        return false;
+      }
+}
+</script>
 
   
   <form name="myForm" action="/C:\Documents and Settings\MARTRIX\Desktop\New Folder\hai.html"
