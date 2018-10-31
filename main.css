@@ -7,23 +7,6 @@
 }
 
 
-.button
-  {
-    background-color: #555555;/* black */
-       
-       border: none;
-    color: white;
-    padding: 3px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    position: relative;
-  top:3px;
-  left:270px;
-  }
 
 
   /* enable absolute positioning */

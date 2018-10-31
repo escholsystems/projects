@@ -56,15 +56,9 @@
   <a href="#Settings">settings</a>
   <a href="#Logout">Logout</a>
 
-  <script>
-function validateForm() {
-    var x = document.forms["myForm"]["fname"].value;
-    if (x == ""){
-        alert("Name must be filled out");
-        return false;
-      }
-}
-</script>
+
+
+  
   <form name="myForm" action="/C:\Documents and Settings\MARTRIX\Desktop\New Folder\hai.html"
 onsubmit="return validateForm()" method="post">
 Name: <input style="position:relative;
@@ -77,13 +71,16 @@ Name: <input style="position:relative;
 
 <body>
 	<script>
-    function openNewWindow() {
-      open("hai.html");
+    function openNewWindow() 
+        {
+      open("login frontpage.html");
     }
   </script>
+
+<form action=".html">
 <input  style="position:relative;top:2px; left:270px; " type="button" value="GO"
          onclick="openNewWindow()">
-
+</form>
 </body>
 </div>
 <style>
