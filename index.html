@@ -65,7 +65,7 @@ function validateForm() {
       }
 }
 </script>
-  <form name="myForm" action="/action_page.php"
+  <form name="myForm" action="/C:\Documents and Settings\MARTRIX\Desktop\New Folder\hai.html"
 onsubmit="return validateForm()" method="post">
 Name: <input style="position:relative;
 		top:2px;
@@ -76,7 +76,14 @@ Name: <input style="position:relative;
 
 
 <body>
-	<button class="button">GO</button>
+	<script>
+    function openNewWindow() {
+      open("hai.html");
+    }
+  </script>
+<input  style="position:relative;top:2px; left:270px; " type="button" value="GO"
+         onclick="openNewWindow()">
+
 </body>
 </div>
 <style>
@@ -342,13 +349,152 @@ function showCustomer(str) {
  text-align: left;
  left: 20px">Consignee Name</h4>
 
-   <input type="text" class="form-control" id="consignmentNo" name="consignmentNo" placeholder="Consignment No" required value tabindex="1" aria-label="..."></br>
+   <input type="text" class="form-control" id="Select Registered Consignee" name="Select Registered 
+   Consignee" placeholder="Select Registered Consignee" required value tabindex="1" aria-label="..."></br>
 
 <div class="inner-addon1 right-addon">
       <div class="form-group has-feedback"> 
 
   <i class="glyphicon glyphicon-pencil form-control-feedback"></i>
 
+<h4 style="position: relative;
+ text-align: left;
+ left: 20px">Destination</h4>
+
+ <div class="col-lg-6">
+    <div class="input-group">
+  <input type="text" class="form-control" id="Select Branch" name="Select Branch " placeholder="Select Branch" required value tabindex="4"  aria-label="...">
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">select <span class="caret"></span></button>
+        <ul class="dropdown-menu dropdown-menu-right">
+          <li><a href="#">kochi</a></li>
+          <li><a href="#">chennai</a></li>
+          <li><a href="#">banglure</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">Choose City</a></li>
+        </ul>
+      </div><!-- /btn-group -->
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->
+<script>
+function showCustomer(str) {
+  var xhttp;    
+  if (str == "") {
+    document.getElementById("txtHint").innerHTML = "";
+    return;
+  }
+  xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("txtHint").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "getcustomer.asp?q="+str, true);
+  xhttp.send();
+}
+</script>
+<br>
+<h4 style="position: relative;
+ text-align: left;
+ left: 20px">Mobile Number</h4>
+
+<input type="text" class="form-control" id="Mobile Number" name="Mobile Number" placeholder="Mobile Number" required value tabindex="1" aria-label="..."></br>
+
+<h4 style="position: relative;
+ text-align: left;
+ left: 20px">State</h4>
+
+<div class="col-lg-6">
+    <div class="input-group">
+  <input type="text" class="form-control" id="Select State" name="Select State " placeholder="Select State" required value tabindex="4"  aria-label="...">
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">select <span class="caret"></span></button>
+        <ul class="dropdown-menu dropdown-menu-right">
+          <li><a href="#">kochi</a></li>
+          <li><a href="#">chennai</a></li>
+          <li><a href="#">banglure</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">Choose City</a></li>
+        </ul>
+      </div><!-- /btn-group -->
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->
+<script>
+function showCustomer(str) {
+  var xhttp;    
+  if (str == "") {
+    document.getElementById("txtHint").innerHTML = "";
+    return;
+  }
+  xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("txtHint").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "getcustomer.asp?q="+str, true);
+  xhttp.send();
+}
+</script>
+
+<br>
+<h4 style="position: relative;
+ text-align: left;
+ left: 20px">City</h4>
+
+ <div class="col-lg-6">
+    <div class="input-group">
+  <input type="text" class="form-control" id="Select City" name="Select City " placeholder="Select City" required value tabindex="4"  aria-label="...">
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">select <span class="caret"></span></button>
+        <ul class="dropdown-menu dropdown-menu-right">
+          <li><a href="#">kochi</a></li>
+          <li><a href="#">chennai</a></li>
+          <li><a href="#">banglure</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">Choose City</a></li>
+        </ul>
+      </div><!-- /btn-group -->
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->
+<script>
+function showCustomer(str) {
+  var xhttp;    
+  if (str == "") {
+    document.getElementById("txtHint").innerHTML = "";
+    return;
+  }
+  xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("txtHint").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "getcustomer.asp?q="+str, true);
+  xhttp.send();
+}
+</script>
+<br>
+<h4 style="position: relative;
+ text-align: left;
+ left: 20px">Zip Code</h4>
+
+<input type="text" class="form-control" id="Zip Code" name="Zip Code" placeholder="Zip Code" required value tabindex="1" aria-label="..."></br>
+
+<h4 style="position: relative;
+ text-align: left;
+ left: 20px">Invoice Number</h4>
+
+ <input type="text" class="form-control" id="Invoice Number" name="Invoice Number" placeholder="Invoice Number" required value tabindex="1" aria-label="..."></br>
+
+ <h4 style="position: relative;
+ text-align: left;
+ left: 20px">Invoice Amount</h4>
+
+<input type="text" class="form-control" id="Invoice Amount" name="Invoice Amount" placeholder="Invoice Amount" required value tabindex="1" aria-label="..."></br>
 
 
 </body>
