@@ -17,7 +17,7 @@
 /* style icon */
 .inner-addon .glyphicon {
   position: relative;
-  top: -45px;
+  top: 5px;
   padding: 10px;
   pointer-events: none;
 }
