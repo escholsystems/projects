@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1.">
+	<title>Matrix logistics</title>
+  <meta charset="windows-1252">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -60,9 +62,9 @@ function validateForm() {
       }
 }
 </script>
-</div></body>
+</body>
 <body>
-  <form name="myForm" action="/C:\Documents and Settings\MARTRIX\Desktop\New Folder\secondpage.html"
+  <form name="myForm" action=""
 onsubmit="return validateForm()" method="post">
  <input style="position:relative;
 		top:2px;
@@ -112,302 +114,135 @@ body {
 </div>
 </body>
 <body>
-<style></style>
-<body>
-
-<script>
-
-  // Original JavaScript code by Chirp Internet: www.chirp.com.au
-  // Please acknowledge use of this code by including this header.
-
-  function getCookie(name)
+<style>
   {
-    var re = new RegExp(name + "=([^;]+)");
-    var value = re.exec(document.cookie);
-    return (value != null) ? unescape(value[1]) : null;
-  }
+    background-color: lightgrey;
+    width: 300px;
+    border: 25px solid green;
+    padding: 25px;
+    margin: 25px;
+}
 
-</script> 
+</style>
+<style>
+    .container{overflow: hidden;}
+    .tab{float: center;}
+    .tab{margin-left: 50px}
+    .tab-2 input{display: block;margin-bottom: 10px}
+    tr{transition:all .25s ease-in-out}
+    tr:hover{background-color: #EEE;cursor: pointer; 
+  </style>
+</head>
+<body>
+      <div class="container">
+        <div class="tab tab-1">
+            <table id="table" border="1">
+              <tr>
+                <th>Consignment No</th>
+                <th>Consignment Date</th>
+                <th>Consigner Name</th>
+                <th>Origin</th>
+                <th>Consignee Name</th>
+                <th>Destination</th>
+                <th>City</th>
+                <th>Invoice Number</th>
+                <th>Package</th>
+                <th>Docs</th>
+                <th>Total pkge</th>
 
-  
-  <h3 style="position: relative;
-  top: px;
-  left:30px;
-  background-color: ">Consignor Details</h3>
- <h4 style="position: relative;
- left: 10px">Consignment No</h4>
-   <input type="text" class="for-control" id="consignmentNo" name="consignmentNo" placeholder="Consignment No" required value tabindex="1"></br>
- <h4 style="position: relative;
- left:10px">Consignment Date</h4>
-<input type="text" class="for-control" id="consignmentDate" name="consignmentDate" placeholder="Consignment Date" required value tabindex="2">
-<div class="container">
-      <h4 style="position:relative;
-      left:-60px">Consigner Name</h4>
-      <span class="glyphicon glyphicon-pencil"></span></p>
-      <form action=""> 
-<select name="customers" onchange="showCustomer(this.value)">
-<option value="">Select a customer:</option>
-<option value="ALFKI">raju</option>
-<option value="NORTS ">ramu</option>
-<option value="WOLZA">raku</option>
-</select>
-<script>
-function showCustomer(str) {
-  var xhttp;    
-  if (str == "") {
-    document.getElementById("txtHint").innerHTML = "";
-    return;
-  }
-  xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("txtHint").innerHTML = this.responseText;
-    }
+              </tr>
+              
+            </table>          
+        </div>
+        <div class="tab tab-2">
+          Consignment No:<input type="text"  name="fname" id="fname">
+          Consignment Date :<input type="text"  name="fname" id="Cdate">
+          Consigner Name :<input type="text" name="fname" id="Cname">
+          Origin :<input type="text" name="fname" id="Origin">
+          Consignee Name:<input type="text" name="fname" id="Cnname">
+            Destination:<input type="text" name="fname" id="Dstn">
+            City:<input type="text" name="fname" id="City">
+            Invoice Name:<input type="text" name="fname" id="Iname">
+            Package:<input type="text" name="fname" id="pkge">
+            Docs:<input type="text" name="fname" id="Docs">
+            Total pkge:<input type="text" name="fname" id="Tpkge">
+<button onclick="addHtmlTablerow();">Add</button>
+<button>Edit</button>
+<button>Remove</button>
+
+
+        </div>
+      </div>
+      <script>
+        
+
+        // add row
+        function addHtmlTablerow() {
+
+          // get the table by id
+          // create a new row and cells
+          // get value from input  text
+          // set the values into row cell's
+
+        
+        var table = document.getElementById("table"),
+            newRow = table.insertRow(table.length),
+          cell1 = newRow.insertCell(0),
+          cell2 = newRow.insertCell(1),
+          cell3 = newRow.insertCell(2),
+          cell4 = newRow.insertCell(3),
+          cell5 = newRow.insertCell(4),
+          cell6 = newRow.insertCell(5),
+          cell7 = newRow.insertCell(6),
+          cell8 = newRow.insertCell(7),
+          cell9 = newRow.insertCell(8),
+          cell10 =newRow.insertCell(9),
+          cell11 = newRow.insertCell(10),
+
+          fname = document.getElementById("fname").value,
+          Cdate = document.getElementById("Cdate").value,
+           Cname = document.getElementById("Cname").value,
+           Origin = document.getElementById("Origin").value,
+           Consignee Name = document.getElementById("Cnname").value,
+           Destination =document.getElementById("Dstn").value,
+           City = document.getElementById("City").value,
+           Invoice Name = document.getElementById("Iname").value,
+           Package = document.getElementById("pkge").value,
+           Docs = document.getElementById("Docs").value,
+           Total pkge =document.getElementById("Tpkge").value;
+
+cell1.innerHTML = fname;
+cell2.innerHTML = Cdate;
+cell3.innerHTML = Cname; 
+cell4.innerHTML = Origin;
+cell5.innerHTML = Cnname;
+cell6.innerHTML = Dstn;
+cell7.innerHTML = City;
+cell8.innerHTML = Iname;
+cell9.innerHTML = pkge;
+cell10.innerHTML = Docs;
+cell11.innerHTML = Tpkge;
+
+// call the fuction to set the event to the new row
+
+
+function selectedRowToInput()
+{
+
+var rIndex,table = document.getElementById("table");
+for(var i = 0; i < table.rows.length; i++)
+{
+  table.rows(i).onclick = function()
+{
+
+// get the selected row index
+  rIndex = this.rowIndex;
+  console.log(rIndex);
   };
-  xhttp.open("GET", "getcustomer.asp?q="+str, true);
-  xhttp.send();
 }
-</script>
-<h4 style="position: relative;
- left:10px">State</h4>
-<form action=""> 
-<select name="customers" onchange="showCustomer(this.value)">
-<option value="">Select a state:</option>
-<option value="ALFKI">kerala</option>
-<option value="NORTS ">tamil nadu</option>
-<option value="WOLZA">karnataka</option>
-</select>
-</form>
-<script>
-function showCustomer(str) {
-  var xhttp;    
-  if (str == "") {
-    document.getElementById("txtHint").innerHTML = "";
-    return;
-  }
-  xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("txtHint").innerHTML = this.responseText;
-    }
-  };
-  xhttp.open("GET", "getcustomer.asp?q="+str, true);
-  xhttp.send();
 }
-</script>
-<h4 style="position: relative;
- left:10px">City</h4>
-<form action=""> 
-<select name="customers" onchange="showCustomer(this.value)">
-<option value="">Select a city:</option>
-<option value="ALFKI">kerala</option>
-<option value="NORTS ">tamil nadu</option>
-<option value="WOLZA">karnataka</option>
-</select>
-</form>
-<script>
-function showCustomer(str) {
-  var xhttp;    
-  if (str == "") {
-    document.getElementById("txtHint").innerHTML = "";
-    return;
-  }
-  xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("txtHint").innerHTML = this.responseText;
-    }
-  };
-  xhttp.open("GET", "getcustomer.asp?q="+str, true);
-  xhttp.send();
-}
-</script>
-<h4 style="position: relative;
- left:10px">Zip Code</h4>
-<input type="text" class="for-control" id="consignmentDate" name="consignmentDate" placeholder="Consignment Date" required value tabindex="">
+selectedRowToInput();
 
-
-<h4 style="position: relative;
-top: px;
- left:10px">Origin</h4>
- <form action=""> 
-<select name="customers" onchange="showCustomer(this.value)">
-<option value="">Select a Branch:</option>
-<option value="ALFKI">kerala</option>
-<option value="NORTS ">tamil nadu</option>
-<option value="WOLZA">karnataka</option>
-</select>
-</form>
-<script>
-function showCustomer(str) {
-  var xhttp;    
-  if (str == "") {
-    document.getElementById("txtHint").innerHTML = "";
-    return;
-  }
-  xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("txtHint").innerHTML = this.responseText;
-    }
-  };
-  xhttp.open("GET", "getcustomer.asp?q="+str, true);
-  xhttp.send();
-}
-</script>
-<h4 style="position: relative;
-top: px;
- left:10px">Mobile Number</h4>
-<input type="text" class="for-control" id="consignmentDate" name="consignmentDate" placeholder="Consignment Date" required value tabindex="">
-
-<h3 style="position: relative;
-  top: px;
-  left:30px;
-  background-color: ">Consignee Details</h3>
-
-<h4 style="position: relative;
- left: 10px">Consignment No</h4>
-    <input type="text" class="for-control" id="consignmentNo" name="consignmentNo" placeholder="Consignment No" required value tabindex="1">
-<div class="inner-addon1 right-addon">
-      <div class="form-group has-feedback"> 
-  <i class="glyphicon glyphicon-pencil form-control-feedback"></i>
-
-
- </div>
-</div>
-<h4 style="position: relative;
- left: 10px">Destination</h4>
- <form action=""> 
-<select name="customers" onchange="showCustomer(this.value)">
-<option value="">Select a Branch:</option>
-<option value="ALFKI">kerala</option>
-<option value="NORTS ">tamil nadu</option>
-<option value="WOLZA">karnataka</option>
-</select>
-</form>
-<script>
-function showCustomer(str) {
-  var xhttp;    
-  if (str == "") {
-    document.getElementById("txtHint").innerHTML = "";
-    return;
-  }
-  xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("txtHint").innerHTML = this.responseText;
-    }
-  };
-  xhttp.open("GET", "getcustomer.asp?q="+str, true);
-  xhttp.send();
-}
-</script>
-</script>
-<h4 style="position: relative;
-top: px;
- left:10px">Mobile Number</h4>
-<input type="text" class="for-control" id="consignmentDate" name="consignmentDate" placeholder="Consignment Date" required value tabindex="">
-
-<h4 style="position: relative;
- left:10px">State</h4>
-<form action=""> 
-<select name="customers" onchange="showCustomer(this.value)">
-<option value="">Select a state:</option>
-<option value="ALFKI">kerala</option>
-<option value="NORTS ">tamil nadu</option>
-<option value="WOLZA">karnataka</option>
-</select>
-</form>
-<script>
-function showCustomer(str) {
-  var xhttp;    
-  if (str == "") {
-    document.getElementById("txtHint").innerHTML = "";
-    return;
-  }
-  xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("txtHint").innerHTML = this.responseText;
-    }
-  };
-  xhttp.open("GET", "getcustomer.asp?q="+str, true);
-  xhttp.send();
-}
-</script>
-<h4 style="position: relative;
- left:10px">City</h4>
-<form action=""> 
-<select name="customers" onchange="showCustomer(this.value)">
-<option value="">Select a city:</option>
-<option value="ALFKI">kerala</option>
-<option value="NORTS ">tamil nadu</option>
-<option value="WOLZA">karnataka</option>
-</select>
-</form>
-<script>
-function showCustomer(str) {
-  var xhttp;    
-  if (str == "") {
-    document.getElementById("txtHint").innerHTML = "";
-    return;
-  }
-  xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("txtHint").innerHTML = this.responseText;
-    }
-  };
-  xhttp.open("GET", "getcustomer.asp?q="+str, true);
-  xhttp.send();
-}
-</script>
-<h4 style="position: relative;
- left:10px">Zip Code</h4>
-<input type="text" class="for-control" id="consignmentDate" name="consignmentDate" placeholder="Consignment Date" required value tabindex="">
-<h4 style="position: relative;
- left:10px">Invoice Number</h4>
- <input type="text" class="for-control" id="Invoice Number" name="Invoice Number" placeholder="Invoice Number" required value tabindex="">
- <h4 style="position: relative;
- left:10px">Invoice Amount</h4>
- <input type="text" class="for-control" id="Invoice Amount" name="Invoice Amount" placeholder="Invoice Amount" required value tabindex="">
-<h3 style="position: relative;
-  top: px;
-  left:30px;
-  background-color: ">Package Details</h3>
-<h4 style="position: relative;
- left:10px">No of Pkgs</h4>
- <input type="text" class="for-control" id="Invoice Amount" name="Invoice Amount" placeholder="Invoice Amount" required value tabindex="">
-<h4 style="position: relative;
- left:10px">No of Docs</h4>
- <input type="text" class="for-control" id="Invoice Amount" name="Invoice Amount" placeholder="Invoice Amount" required value tabindex="">
-<h4 style="position: relative;
- left:10px">Weight</h4>
- <input type="text" class="for-control" id="Invoice Amount" name="Invoice Amount" placeholder="Invoice Amount" required value tabindex="">
-<h4 style="position: relative;
- left:10px">Measuremnet</h4>
- <input type="text" class="for-control" id="Invoice Amount" name="Invoice Amount" placeholder="Invoice Amount" required value tabindex="">
-<h4 style="position: relative;
- left:10px">larger Box</h4>
- <input type="text" class="for-control" id="Invoice Amount" name="Invoice Amount" placeholder="Invoice Amount" required value tabindex="">
-<h4 style="position: relative;
- left:10px">Small Box</h4>
- <input type="text" class="for-control" id="Invoice Amount" name="Invoice Amount" placeholder="Invoice Amount" required value tabindex="">
-<h4 style="position: relative;
- left:10px">Total</h4>
- <input type="text" class="for-control" id="Invoice Amount" name="Invoice Amount" placeholder="Invoice Amount" required value tabindex="">
-<button onclick="myFunction()">save</button>
-<p id="demo"></p>
-
-<script>
-var = ;
-document.getElementById("demo").innerHTML = fruits;
-
-function myFunction() {
-    fruits.push("");
-    document.getElementById("demo").innerHTML = fruits;
-}
-</script>
-
+      </script>
 </body>
-</body>
+</html>
