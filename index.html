@@ -1,248 +1,262 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<title>Matrix logistics</title>
-  <meta charset="windows-1252">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-  <link rel="stylesheet" href="main.css" type="text/css" />
-	
-	<link rel="stylesheet"  href="stylesheet/main.css">
-	<script src="main.js"></script>
-</head>
-
-	<style> 
-	body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-}
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-.topnav a.active {
-  background-color: #4CAF50;
-  color: white;
-}
-</style>
-</head>
-<body>
-
-<div class="topnav">
-  <a class="active" href="#Matrix Logistics">Matrix Logistic
-  </a>
-  <a href="#Business">Business</a>
-  <a href="#Reports">Reports</a>
-  <a href="#Clients">Clients</a>
-  <a href="#Branches">Branches</a>
-  <a href="#Settings">settings</a>
-  <a href="#Logout">Logout</a>
-<script>
-function validateForm() {
-    var x = document.forms["myForm"]["fname"].value;
-    if (x == ""){
-        alert("Name must be filled out");
-        return false;
-      }
-}
-</script>
-</body>
-<body>
-  <form name="myForm" action=""
-onsubmit="return validateForm()" method="post">
- <input style="position:relative;
-		top:2px;
-		left:270px;
-		type="text" name="Consignment No:" size="30  " id= "Consignment No:" class="" name="Consignment No:" type="text" 
- value="Consignment No:" onfocus="if (this.value=='Consignment No:') {this.value='';}"
-  onblur="if (this.value=='1')"> 
-</body>
-<body>
-	<button class="button">GO</button>
-</body>
-</div>
-<style>
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.topnav1 {
-  overflow: hidden;
-  background-color: #A52A2A;
-}
-.topnav1 a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-.topnav1 a:hover {
-  background-color: #ddd;
-  color: black;
-}
-</style>
-</head>
-<body>
-<div class="topnav1">
-  <a href="#Add New Shipment">Add New Shipment</a>
-  <a href="#View Shipment">View Shipments</a>
-  <a href="#W/O GST">W/O GST</a>
-  <a href="#Create Manifest">Create Manifest</a>
-  <a href="#View Manifest">View Manifest</a>
-  <a href="#Pre-Invoice">Pre-Invoice</a>
-  <a href="#List Invoice">List Invoice</a>
-  <a href="#Pending POD">Pending POD</a>
-  <a href="#View POD">View POD</a>
-</div>
-</body>
-<body>
-<style>
-  {
-    background-color: lightgrey;
-    width: 300px;
-    border: 25px solid green;
-    padding: 25px;
-    margin: 25px;
-}
-
-</style>
-<style>
-    .container{overflow: hidden;}
-    .tab{float: center;}
-    .tab{margin-left: 50px}
-    .tab-2 input{display: block;margin-bottom: 10px}
-    tr{transition:all .25s ease-in-out}
-    tr:hover{background-color: #EEE;cursor: pointer; 
-  </style>
-</head>
-<body>
-      <div class="container">
-        <div class="tab tab-1">
-            <table id="table" border="1">
-              <tr>
-                <th>Consignment No</th>
-                <th>Consignment Date</th>
-                <th>Consigner Name</th>
-                <th>Origin</th>
-                <th>Consignee Name</th>
-                <th>Destination</th>
-                <th>City</th>
-                <th>Invoice Number</th>
-                <th>Package</th>
-                <th>Docs</th>
-                <th>Total pkge</th>
-
-              </tr>
-              
-            </table>          
-        </div>
-        <div class="tab tab-2">
-          Consignment No:<input type="text"  name="fname" id="fname">
-          Consignment Date :<input type="text"  name="fname" id="Cdate">
-          Consigner Name :<input type="text" name="fname" id="Cname">
-          Origin :<input type="text" name="fname" id="Origin">
-          Consignee Name:<input type="text" name="fname" id="Cnname">
-            Destination:<input type="text" name="fname" id="Dstn">
-            City:<input type="text" name="fname" id="City">
-            Invoice Name:<input type="text" name="fname" id="Iname">
-            Package:<input type="text" name="fname" id="pkge">
-            Docs:<input type="text" name="fname" id="Docs">
-            Total pkge:<input type="text" name="fname" id="Tpkge">
-<button onclick="addHtmlTablerow();">Add</button>
-<button>Edit</button>
-<button>Remove</button>
-
-
-        </div>
-      </div>
-      <script>
+<html>
+    <head>
+        <title>Matrix Logistics</title>
+        <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-
-        // add row
-        function addHtmlTablerow() {
-
-          // get the table by id
-          // create a new row and cells
-          // get value from input  text
-          // set the values into row cell's
-
+        <style>
+            
+            .container{overflow: hidden}
+            .tab{float: left;}
+            .tab-2{margin-left: 50px}
+            .tab-2 input{display: block;margin-bottom: 10px}
+            tr{transition:all .25s ease-in-out}
+            tr:hover{background-color:#EEE;cursor: pointer}
+            
+        </style>
         
-        var table = document.getElementById("table"),
-            newRow = table.insertRow(table.length),
-          cell1 = newRow.insertCell(0),
-          cell2 = newRow.insertCell(1),
-          cell3 = newRow.insertCell(2),
-          cell4 = newRow.insertCell(3),
-          cell5 = newRow.insertCell(4),
-          cell6 = newRow.insertCell(5),
-          cell7 = newRow.insertCell(6),
-          cell8 = newRow.insertCell(7),
-          cell9 = newRow.insertCell(8),
-          cell10 =newRow.insertCell(9),
-          cell11 = newRow.insertCell(10),
+    </head>
+    <body>
+        
+        <div class="container">
+            <div class="tab tab-1">
+                <table id="table" border="1">
+                    <tr>
+                        <th>Consignment No</th>
+                        <th>Consignment Date</th>
+                        <th>Consigner Name</th>
+                        <th>Origin</th>
+                        <th>Consignee Name</th>
+                        <th>Destination</th>
+                        <th>City</th>
+                        <th>Invoice Number</th>
+                        <th>Package</th>
+                        <th>Docs</th>
+                
 
-          fname = document.getElementById("fname").value,
-          Cdate = document.getElementById("Cdate").value,
-           Cname = document.getElementById("Cname").value,
-           Origin = document.getElementById("Origin").value,
-           Consignee Name = document.getElementById("Cnname").value,
-           Destination =document.getElementById("Dstn").value,
-           City = document.getElementById("City").value,
-           Invoice Name = document.getElementById("Iname").value,
-           Package = document.getElementById("pkge").value,
-           Docs = document.getElementById("Docs").value,
-           Total pkge =document.getElementById("Tpkge").value;
+                    </tr>
+                    <tr>
+                        <td>A1</td>
+                        <td>B1</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>A3</td>
+                        <td>B3</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>A2</td>
+                        <td>B2</td>
+                        <td>20</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tab tab-2">
+                Consignment No :<input type="Number" name="fname" id="fname">
+                Consignment Date :<input type="text" name="Cdate" id="Cdate">
+                Consigner Name :<input type="text" name="Cname" id="Cname">
+                Origin:<input type="text" name="Origin" id="Origin">
+                Consignee Name:<input type="text" name="CNname" id="CNname">
+                Destination:<input type="text" name="Dstn" id="Dstn">
+                City:<input type="text" name="City" id="City">
+                Invoice Number:<input type="Number" name="Inumb" id="Inumb">
+                Package:<input type="text" name="pkge" id="pkge">
+                Docs:<input type="Number" name="Docs" id="Docs">
+                
 
-cell1.innerHTML = fname;
-cell2.innerHTML = Cdate;
-cell3.innerHTML = Cname; 
-cell4.innerHTML = Origin;
-cell5.innerHTML = Cnname;
-cell6.innerHTML = Dstn;
-cell7.innerHTML = City;
-cell8.innerHTML = Iname;
-cell9.innerHTML = pkge;
-cell10.innerHTML = Docs;
-cell11.innerHTML = Tpkge;
+                <button onclick="addHtmlTableRow();">Add</button>
+                <button onclick="editHtmlTbleSelectedRow();">Edit</button>
+                <button onclick="removeSelectedRow();">Remove</button>
 
-// call the fuction to set the event to the new row
+            </div>
+        </div>
+        
+        <script>
+            
+            var rIndex,
+                table = document.getElementById("table");
+            
+            // check the empty input
+            function checkEmptyInput()
+            {
+                var isEmpty = false,
+                    fname = document.getElementById("fname").value,
+                    Cdate = document.getElementById("Cdate").value,
+                    Cname = document.getElementById("Cname").value;
+                    Origin = document.getElementById("Origin").value;
+                    CNname = document.getElementById("CNname").value;
+                    Dstn = document.getElementById("Dstn").value;
+                    City = document.getElementById("City").value;
+                    Inumb = document.getElementById("Inumb").value;
+                    pkge = document.getElementById("pkge").value;
+                    Docs = document.getElementById("Docs").value;
+            
+            
+            
+                if(fname === ""){
+                    alert("First Name Connot Be Empty");
+                    isEmpty = true;
+                }
+                else if(Cdate === ""){
+                    alert("Cdate Connot Be Empty");
+                    isEmpty = true;
+                }
+                else if(Cname === ""){
+                    alert("Cname Connot Be Empty");
+                    isEmpty = true;
+                }
+                else if(Origin === ""){
+                    alert("Origin Connot Be Empty");
+                    isEmpty = true;
+                }
+                else if(CNname === ""){
+                    alert("CNname Connot Be Empty");
+                    isEmpty = true;
+                }
+                else if(Dstn === ""){
+                    alert("Dstn Connot Be Empty");
+                    isEmpty = true;
+                }
+                else if(City === ""){
+                    alert("City Connot Be Empty");
+                    isEmpty = true;
+                }
+                else if(Inumb === ""){
+                    alert("Inumb Connot Be Empty");
+                    isEmpty = true;
+                }
+                else if(pkge === ""){
+                    alert("pkge Connot Be Empty");
+                    isEmpty = true;
+                }
+                else if(Docs === ""){
+                    alert("Docs Connot Be Empty");
+                    isEmpty = true;
+                }
+
+                return isEmpty;
+            }
+            
+            // add Row
+            function addHtmlTableRow()
+            {
+                // get the table by id
+                // create a new row and cells
+                // get value from input text
+                // set the values into row cell's
+                if(!checkEmptyInput()){
+                var newRow = table.insertRow(table.length),
+                    cell1 = newRow.insertCell(0),
+                    cell2 = newRow.insertCell(1),
+                    cell3 = newRow.insertCell(2),
+                    cell4 = newRow.insertCell(3),
+                    cell5 = newRow.insertCell(4),
+                    cell6 = newRow.insertCell(5),
+                    cell7 = newRow.insertCell(6),
+                    cell8 = newRow.insertCell(7),
+                    cell9 = newRow.insertCell(8),
+                    cell10 = newRow.insertCell(9),
 
 
-function selectedRowToInput()
-{
+                    fname = document.getElementById("fname").value,
+                    Cdate = document.getElementById("Cdate").value,
+                    Cname = document.getElementById("Cname").value;
+                    Origin = document.getElementById("Origin").value;
+                    CNname = document.getElementById("CNname").value;
+                    Dstn = document.getElementById("Dstn").value;
+                    City = document.getElementById("City").value;
+                    Inumb = document.getElementById("Inumb").value;
+                    pkge = document.getElementById("pkge").value;
+                    Docs = document.getElementById("Docs").value;
+            
+            
+            
+                cell1.innerHTML = fname;
+                cell2.innerHTML = Cdate;
+                cell3.innerHTML = Cname;
+                cell4.innerHTML = Origin;
+                cell5.innerHTML = CNname;
+                cell6.innerHTML = Dstn;
+                cell7.innerHTML = City;
+                cell8.innerHTML = Inumb;
+                cell9.innerHTML = pkge;
+                cell10.innerHTML = Docs;
 
-var rIndex,table = document.getElementById("table");
-for(var i = 0; i < table.rows.length; i++)
-{
-  table.rows(i).onclick = function()
-{
+                // call the function to set the event to the new row
+                selectedRowToInput();
+            }
+            }
+            
+            // display selected row data into input text
+            function selectedRowToInput()
+            {
+                
+                for(var i = 1; i < table.rows.length; i++)
+                {
+                    table.rows[i].onclick = function()
+                    {
+                      // get the seected row index
+                      rIndex = this.rowIndex;
+                      document.getElementById("fname").value = this.cells[0].innerHTML;
+                      document.getElementById("Cdate").value = this.cells[1].innerHTML;
+                      document.getElementById("Cname").value = this.cells[2].innerHTML;
+                      document.getElementById("Origin").value = this.cells[3].innerHTML;
+                       document.getElementById("CNname").value = this.cells[4].innerHTML;
+                       document.getElementById("Dstn").value = this.cells[5].innerHTML;
+                       document.getElementById("City").value = this.cells[6].innerHTML;
+                       document.getElementById("Inumb").value = this.cells[7].innerHTML;
+                       document.getElementById("pkge").value = this.cells[8].innerHTML;
+                       document.getElementById("Docs").value = this.cells[9].innerHTML;
+                    };
+                }
+            }
+            selectedRowToInput();
+            
+            function editHtmlTbleSelectedRow()
+            {
+                var fname = document.getElementById("fname").value,
+                    Cdate = document.getElementById("Cdate").value,
+                    Cname = document.getElementById("Cname").value;
+                    Origin = document.getElementById("Origin").value;
+                    CNname = document.getElementById("CNname").value;
+                    Dstn = document.getElementById("Dstn").value;
+                    City = document.getElementById("City").value;
+                    Inumb = document.getElementById("Inumb").value;
+                    pkge = document.getElementById("pkge").value;
+                    Docs = document.getElementById("Docs").value;
 
-// get the selected row index
-  rIndex = this.rowIndex;
-  console.log(rIndex);
-  };
-}
-}
-selectedRowToInput();
-
-      </script>
-</body>
+               if(!checkEmptyInput()){
+                table.rows[rIndex].cells[0].innerHTML = fname;
+                table.rows[rIndex].cells[1].innerHTML = Cdate;
+                table.rows[rIndex].cells[2].innerHTML = Cname;
+                table.rows[rIndex].cells[3].innerHTML = Origin;
+                table.rows[rIndex].cells[4].innerHTML = CNname;
+                table.rows[rIndex].cells[5].innerHTML = Dstn;
+                table.rows[rIndex].cells[6].innerHTML = City;
+                table.rows[rIndex].cells[7].innerHTML = Inumb;
+                table.rows[rIndex].cells[8].innerHTML = pkge;
+                table.rows[rIndex].cells[9].innerHTML = Docs;
+              }
+            }
+            
+            function removeSelectedRow()
+            {
+                table.deleteRow(rIndex);
+                // clear input text
+                document.getElementById("fname").value = "";
+                document.getElementById("Cdate").value = "";
+                document.getElementById("Cname").value = "";
+                document.getElementById("Origin").value = "";
+                document.getElementById("CNname").value = "";
+                document.getElementById("Dstn").value = "";
+                document.getElementById("City").value = "";
+                document.getElementById("Inumb").value = "";
+                document.getElementById("pkge").value = "";
+                document.getElementById("Docs").value = "";
+            }
+        </script>
+        
+    </body>
 </html>
