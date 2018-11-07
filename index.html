@@ -4,12 +4,95 @@
         <title>Matrix Logistics</title>
         <meta charset="windows-1252">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
+        <style> 
+    body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+<body>
+<div class="topnav">
+  <a class="active" href="#Matrix Logistics">Matrix Logistic
+  </a>
+  <a href="#Business">Business</a>
+  <a href="#Reports">Reports</a>
+  <a href="#Clients">Clients</a>
+  <a href="#Branches">Branches</a>
+  <a href="#Settings">settings</a>
+  <a href="#Logout">Logout</a>
+  <input style="position:relative;
+        top:3px;
+        left:290px;
+        type="text" name="Consignment No:" size="30  " id= "Consignment No:" class="" name="Consignment No:" type="text" 
+ value="Consignment No:" onfocus="if (this.value=='Consignment No:') {this.value='';}"
+  onblur="if (this.value=='1')"> 
+  <button class="button">GO</button>
+</div>
+</body>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.topnav1 {
+  overflow: hidden;
+  background-color: #A52A2A;
+}
+.topnav1 a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav1 a:hover {
+  background-color: #ddd;
+  color: black;
+}
+</style>
+</head>
+<body>
+<div class="topnav1">
+  <a href="#Add New Shipment">Add New Shipment</a>
+  <a href="#View Shipment">View Shipments</a>
+  <a href="#W/O GST">W/O GST</a>
+  <a href="#Create Manifest">Create Manifest</a>
+  <a href="#View Manifest">View Manifest</a>
+  <a href="#Pre-Invoice">Pre-Invoice</a>
+  <a href="#List Invoice">List Invoice</a>
+  <a href="#Pending POD">Pending POD</a>
+  <a href="#View POD">View POD</a>
+</div>
+</body>
+    
+
+          
         <style>
             
             .container{overflow: hidden}
             .tab{float: right;}
-            .tab-2{margin-right: 20px}
+            .tab-2{margin-right: 10px}
             .tab-2 input{display: block;margin-bottom: 10px}
             tr{transition:all .25s ease-in-out}
             tr:hover{background-color:#EEE;cursor: pointer}
@@ -17,53 +100,9 @@
         </style>
         
     </head>
-    <body>
-        
-        <div class="container">
-            <div class="tab tab-1">
-                <table id="table" border="1">
-                    <tr>
-                        <th>Consignment No</th>
-                        <th>Consignment Date</th>
-                        <th>Consigner Name</th>
-                        <th>Origin</th>
-                        <th>Consignee Name</th>
-                        <th>Destination</th>
-                        <th>City</th>
-                        <th>Invoice Number</th>
-                        <th>Package</th>
-                        <th>Docs</th>
-                
-
-                    </tr>
-                    <tr>
-                        <td>A1</td>
-                        <td>B1</td>
-                        <td>10</td>
-                        <td>c</td>
-                        <td>d</td>
-                        <td>e</td>
-                        <td>f</td>
-                        <td>g</td>
-                        <td>h</td>
-                        <td>i</td>
-                    </tr>
-                    <tr>
-                        <td>A3</td>
-                        <td>B3</td>
-                        <td>30</td>
-                        <td>c</td>
-                        <td>d</td>
-                        <td>e</td>
-                        <td>f</td>
-                        <td>g</td>
-                        <td>h</td>
-                        <td>i</td>
-                    </tr>
-                    
-                </table>
-            </div>
+    
             <div class="tab tab-2">
+                <form action="/action-page.html" method="get">
                 Consignment No :<input type="Number" name="fname" id="fname">
                 Consignment Date :<input type="text" name="Cdate" id="Cdate">
                 Consigner Name :<input type="text" name="Cname" id="Cname">
@@ -76,7 +115,7 @@
                 Docs:<input type="Number" name="Docs" id="Docs">
                 
 
-                <button onclick="addHtmlTableRow();">Add</button>
+                <button type="add" formaction="/action-page.html" onclick="addHtmlTableRow();">Add</button>
                 <button onclick="editHtmlTbleSelectedRow();">Edit</button>
                 <button onclick="removeSelectedRow();">Remove</button>
 
@@ -152,7 +191,9 @@
             // add Row
             function addHtmlTableRow()
             {
-                
+                // get the table by id
+                // create a new row and cells
+                // get value from input text
                 // set the values into row cell's
                 if(!checkEmptyInput()){
                 var newRow = table.insertRow(table.length),
