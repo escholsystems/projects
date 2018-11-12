@@ -115,14 +115,66 @@ body {
                 Docs:<input type="Number" name="Docs" id="Docs">
                 
 
-                <button type="add" onclick="addHtmlTableRow();">Add</button>
-                <button onclick="editHtmlTbleSelectedRow();">Edit</button>
-                <button onclick="removeSelectedRow();">Remove</button>
+                <button onclick="addHtmlTableRow();">Save</button>
+              </form>
+                <script>
+                  function saveHtmlTableRow()
+            {
+                // get the table by id
+                // create a new row and cells
+                // get value from input text
+                // set the values into row cell's
+                if(checkEmptyInput()){
+                var newRow = table.insertRow(table.length),
+                    cell1 = newRow.insertCell(0),
+                    cell2 = newRow.insertCell(1),
+                    cell3 = newRow.insertCell(2),
+                    cell4 = newRow.insertCell(3),
+                    cell5 = newRow.insertCell(4),
+                    cell6 = newRow.insertCell(5),
+                    cell7 = newRow.insertCell(6),
+                    cell8 = newRow.insertCell(7),
+                    cell9 = newRow.insertCell(8),
+                    cell10 = newRow.insertCell(9),
+
+
+                    fname = document.getElementById("fname").value,
+                    Cdate = document.getElementById("Cdate").value,
+                    Cname = document.getElementById("Cname").value;
+                    Origin = document.getElementById("Origin").value;
+                    CNname = document.getElementById("CNname").value;
+                    Dstn = document.getElementById("Dstn").value;
+                    City = document.getElementById("City").value;
+                    Inumb = document.getElementById("Inumb").value;
+                    pkge = document.getElementById("pkge").value;
+                    Docs = document.getElementById("Docs").value;
+            
+            
+            
+                cell1.innerHTML = fname;
+                cell2.innerHTML = Cdate;
+                cell3.innerHTML = Cname;
+                cell4.innerHTML = Origin;
+                cell5.innerHTML = CNname;
+                cell6.innerHTML = Dstn;
+                cell7.innerHTML = City;
+                cell8.innerHTML = Inumb;
+                cell9.innerHTML = pkge;
+                cell10.innerHTML = Docs;
+
+                // call the function to set the event to the new row
+                selectedRowToInput();
+            }
+            }
+            
+            
+    
+                </script>
 
 
             
         </div>
-        </form>
+      
 </div>
 
 </html>
