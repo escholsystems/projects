@@ -53,14 +53,14 @@
 body {font-family: Arial;}
 
 /* Style the tab */
-.tab {
+.act {
     overflow: hidden;
     border: 1px solid #ccc;
     background-color: #A52A2A;
 }
 
 /* Style the buttons inside the tab */
-.tab button {
+.act button {
     background-color: inherit;
     float: left;
     border: none;
@@ -72,29 +72,23 @@ body {font-family: Arial;}
 }
 
 /* Change background color of buttons on hover */
-.tab button:hover {
+.act button:hover {
     background-color: #ddd;
 }
 
 /* Create an active/current tablink class */
-.tab button.active {
+.act button.active {
     background-color: #ccc;
 }
 
-/* Style the tab content */
-.tabcontent {
-    display: none;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
-}
+
 </style>
 </head>
 <body>
 
 
 
-<div class="tab">
+<div class="act">
    <form action="index.html" method="link">
   <button class="tablinks" onclick="openCity(event, 'add new shipment')">add new shipment</button>
 </form>
