@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="main.css" type="text/css" />
+	
+	<link rel="stylesheet"  href="stylesheet/main.css">
+	<script src="main.js"></script>
+</head>
+
+	<style> 
+	body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a class="active" href="#Matrix Logistics">Matrix Logistic
+  </a>
+  <a href="#Business">Business</a>
+  <a href="#Reports">Reports</a>
+  <a href="#Clients">Clients</a>
+  <a href="#Branches">Branches</a>
+  <a href="#Settings">settings</a>
+  <a href="#Logout">Logout</a>
+<script>
+function validateForm() {
+    var x = document.forms["myForm"]["fname"].value;
+    if (x == ""){
+        alert("Name must be filled out");
+        return false;
+      }
+}
+</script>
+</div></body>
+<body>
+  <form name="myForm" action="/C:\Documents and Settings\MARTRIX\Desktop\New Folder\secondpage.html"
+onsubmit="return validateForm()" method="post">
+ <input style="position:relative;
+		top:2px;
+		left:270px;
+		type="text" name="Consignment No:" size="30  " id= "Consignment No:" class="" name="Consignment No:" type="text" 
+ value="Consignment No:" onfocus="if (this.value=='Consignment No:') {this.value='';}"
+  onblur="if (this.value=='1')"> 
+</body>
+<body>
+	<button class="button">GO</button>
+</body>
+</div>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.topnav1 {
+  overflow: hidden;
+  background-color: #A52A2A;
+}
+.topnav1 a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav1 a:hover {
+  background-color: #ddd;
+  color: black;
+}
+</style>
+</head>
+<body>
+<div class="topnav1">
+  <a href="#Add New Shipment">Add New Shipment</a>
+  <a href="#View Shipment">View Shipments</a>
+  <a href="#W/O GST">W/O GST</a>
+  <a href="#Create Manifest">Create Manifest</a>
+  <a href="#View Manifest">View Manifest</a>
+  <a href="#Pre-Invoice">Pre-Invoice</a>
+  <a href="#List Invoice">List Invoice</a>
+  <a href="#Pending POD">Pending POD</a>
+  <a href="#View POD">View POD</a>
+</div>
+</body>
+<body>
+<style></style>
+<body>
+
+<script>
+
+  // Original JavaScript code by Chirp Internet: www.chirp.com.au
+  // Please acknowledge use of this code by including this header.
+
+  function getCookie(name)
+  {
+    var re = new RegExp(name + "=([^;]+)");
+    var value = re.exec(document.cookie);
+    return (value != null) ? unescape(value[1]) : null;
+  }
+
+</script> 
+
+  
+  <h3 style="position: relative;
+  top: px;
+  left:30px;
+  background-color: ">Consignor Details</h3>
+ <h4 style="position: relative;
+ left: 10px">Consignment No</h4>
+   <input type="text" class="for-control" id="consignmentNo" name="consignmentNo" placeholder="Consignment No" required value tabindex="1"></br>
+ <h4 style="position: relative;
+ left:10px">Consignment Date</h4>
+<input type="text" class="for-control" id="consignmentDate" name="consignmentDate" placeholder="Consignment Date" required value tabindex="2">
+<div class="container">
+      <h4 style="position:relative;
+      left:-60px">Consigner Name</h4>
+      <span class="glyphicon glyphicon-pencil"></span></p>
+      <form action=""> 
+<select name="customers" onchange="showCustomer(this.value)">
+<option value="">Select a customer:</option>
+<option value="ALFKI">raju</option>
+<option value="NORTS ">ramu</option>
+<option value="WOLZA">raku</option>
+</select>
+<script>
+function showCustomer(str) {
+  var xhttp;    
+  if (str == "") {
+    document.getElementById("txtHint").innerHTML = "";
+    return;
+  }
+  xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("txtHint").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "getcustomer.asp?q="+str, true);
+  xhttp.send();
+}
+</script>
+<h4 style="position: relative;
+ left:10px">State</h4>
+<form action=""> 
+<select name="customers" onchange="showCustomer(this.value)">
+<option value="">Select a state:</option>
+<option value="ALFKI">kerala</option>
+<option value="NORTS ">tamil nadu</option>
+<option value="WOLZA">karnataka</option>
+</select>
+</form>
+<script>
+function showCustomer(str) {
+  var xhttp;    
+  if (str == "") {
+    document.getElementById("txtHint").innerHTML = "";
+    return;
+  }
+  xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("txtHint").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "getcustomer.asp?q="+str, true);
+  xhttp.send();
+}
+</script>
+<h4 style="position: relative;
+ left:10px">City</h4>
+<form action=""> 
+<select name="customers" onchange="showCustomer(this.value)">
+<option value="">Select a city:</option>
+<option value="ALFKI">kerala</option>
+<option value="NORTS ">tamil nadu</option>
+<option value="WOLZA">karnataka</option>
+</select>
+</form>
+<script>
+function showCustomer(str) {
+  var xhttp;    
+  if (str == "") {
+    document.getElementById("txtHint").innerHTML = "";
+    return;
+  }
+  xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("txtHint").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "getcustomer.asp?q="+str, true);
+  xhttp.send();
+}
+</script>
+<h4 style="position: relative;
+ left:10px">Zip Code</h4>
+<input type="text" class="for-control" id="consignmentDate" name="consignmentDate" placeholder="Consignment Date" required value tabindex="">
+
+
+<h4 style="position: relative;
+top: px;
+ left:10px">Origin</h4>
+ <form action=""> 
+<select name="customers" onchange="showCustomer(this.value)">
+<option value="">Select a Branch:</option>
+<option value="ALFKI">kerala</option>
+<option value="NORTS ">tamil nadu</option>
+<option value="WOLZA">karnataka</option>
+</select>
+</form>
+<script>
+function showCustomer(str) {
+  var xhttp;    
+  if (str == "") {
+    document.getElementById("txtHint").innerHTML = "";
+    return;
+  }
+  xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("txtHint").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "getcustomer.asp?q="+str, true);
+  xhttp.send();
+}
+</script>
+<h4 style="position: relative;
+top: px;
+ left:10px">Mobile Number</h4>
+<input type="text" class="for-control" id="consignmentDate" name="consignmentDate" placeholder="Consignment Date" required value tabindex="">
+
+<h3 style="position: relative;
+  top: px;
+  left:30px;
+  background-color: ">Consignee Details</h3>
+
+<h4 style="position: relative;
+ left: 10px">Consignment No</h4>
+    <input type="text" class="for-control" id="consignmentNo" name="consignmentNo" placeholder="Consignment No" required value tabindex="1">
+<div class="inner-addon1 right-addon">
+      <div class="form-group has-feedback"> 
+  <i class="glyphicon glyphicon-pencil form-control-feedback"></i>
+
+
+ </div>
+</div>
+<h4 style="position: relative;
+ left: 10px">Destination</h4>
+ <form action=""> 
+<select name="customers" onchange="showCustomer(this.value)">
+<option value="">Select a Branch:</option>
+<option value="ALFKI">kerala</option>
+<option value="NORTS ">tamil nadu</option>
+<option value="WOLZA">karnataka</option>
+</select>
+</form>
+<script>
+function showCustomer(str) {
+  var xhttp;    
+  if (str == "") {
+    document.getElementById("txtHint").innerHTML = "";
+    return;
+  }
+  xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("txtHint").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "getcustomer.asp?q="+str, true);
+  xhttp.send();
+}
+</script>
+</script>
+<h4 style="position: relative;
+top: px;
+ left:10px">Mobile Number</h4>
+<input type="text" class="for-control" id="consignmentDate" name="consignmentDate" placeholder="Consignment Date" required value tabindex="">
+
+<h4 style="position: relative;
+ left:10px">State</h4>
+<form action=""> 
+<select name="customers" onchange="showCustomer(this.value)">
+<option value="">Select a state:</option>
+<option value="ALFKI">kerala</option>
+<option value="NORTS ">tamil nadu</option>
+<option value="WOLZA">karnataka</option>
+</select>
+</form>
+<script>
+function showCustomer(str) {
+  var xhttp;    
+  if (str == "") {
+    document.getElementById("txtHint").innerHTML = "";
+    return;
+  }
+  xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("txtHint").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "getcustomer.asp?q="+str, true);
+  xhttp.send();
+}
+</script>
+<h4 style="position: relative;
+ left:10px">City</h4>
+<form action=""> 
+<select name="customers" onchange="showCustomer(this.value)">
+<option value="">Select a city:</option>
+<option value="ALFKI">kerala</option>
+<option value="NORTS ">tamil nadu</option>
+<option value="WOLZA">karnataka</option>
+</select>
+</form>
+<script>
+function showCustomer(str) {
+  var xhttp;    
+  if (str == "") {
+    document.getElementById("txtHint").innerHTML = "";
+    return;
+  }
+  xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("txtHint").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "getcustomer.asp?q="+str, true);
+  xhttp.send();
+}
+</script>
+<h4 style="position: relative;
+ left:10px">Zip Code</h4>
+<input type="text" class="for-control" id="consignmentDate" name="consignmentDate" placeholder="Consignment Date" required value tabindex="">
+<h4 style="position: relative;
+ left:10px">Invoice Number</h4>
+ <input type="text" class="for-control" id="Invoice Number" name="Invoice Number" placeholder="Invoice Number" required value tabindex="">
+ <h4 style="position: relative;
+ left:10px">Invoice Amount</h4>
+ <input type="text" class="for-control" id="Invoice Amount" name="Invoice Amount" placeholder="Invoice Amount" required value tabindex="">
+<h3 style="position: relative;
+  top: px;
+  left:30px;
+  background-color: ">Package Details</h3>
+<h4 style="position: relative;
+ left:10px">No of Pkgs</h4>
+ <input type="text" class="for-control" id="Invoice Amount" name="Invoice Amount" placeholder="Invoice Amount" required value tabindex="">
+<h4 style="position: relative;
+ left:10px">No of Docs</h4>
+ <input type="text" class="for-control" id="Invoice Amount" name="Invoice Amount" placeholder="Invoice Amount" required value tabindex="">
+<h4 style="position: relative;
+ left:10px">Weight</h4>
+ <input type="text" class="for-control" id="Invoice Amount" name="Invoice Amount" placeholder="Invoice Amount" required value tabindex="">
+<h4 style="position: relative;
+ left:10px">Measuremnet</h4>
+ <input type="text" class="for-control" id="Invoice Amount" name="Invoice Amount" placeholder="Invoice Amount" required value tabindex="">
+<h4 style="position: relative;
+ left:10px">larger Box</h4>
+ <input type="text" class="for-control" id="Invoice Amount" name="Invoice Amount" placeholder="Invoice Amount" required value tabindex="">
+<h4 style="position: relative;
+ left:10px">Small Box</h4>
+ <input type="text" class="for-control" id="Invoice Amount" name="Invoice Amount" placeholder="Invoice Amount" required value tabindex="">
+<h4 style="position: relative;
+ left:10px">Total</h4>
+ <input type="text" class="for-control" id="Invoice Amount" name="Invoice Amount" placeholder="Invoice Amount" required value tabindex="">
+<button onclick="myFunction()">save</button>
+<p id="demo"></p>
+
+<script>
+var = ;
+document.getElementById("demo").innerHTML = fruits;
+
+function myFunction() {
+    fruits.push("");
+    document.getElementById("demo").innerHTML = fruits;
+}
+</script>
+
+</body>
+</body>

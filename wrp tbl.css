@@ -1,0 +1,17 @@
+.table-wrapper {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Stuff not part of the demo */
+table {
+  background: #f1f1f1;
+}
+
+th,
+td {
+  white-space: nowrap;
+  padding: 5px;
+  text-align: left;
+}

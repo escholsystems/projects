@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Matrix logistics</title>
+	<meta charset="windows-1252">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<style>
+		.container{overflow: hidden;}
+		.tab{float: left;}
+		.tab{margin-left: 50px}
+		.tab-2 input{display: block;margin-bottom: 10px}
+		tr{transition:all .25s ease-in-out}
+		tr:hover{background-color: #EEE;cursor: pointer; 
+	</style>
+</head>
+<body>
+      <div class="container">
+      	<div class="tab tab-1">
+            <table id="table" border="1">
+            	<tr>
+            		<th>Consignment No</th>
+            		<th>Consignment Date</th>
+            		<th>Consigner Name</th>
+            		
+
+            	</tr>
+            	
+            </table>      		
+      	</div>
+      	<div class="tab tab-2">
+      		Consignment No:<input type="text"  name="fname" id="fname">
+      		Consignment Date :<input type="text"  name="Cdate" id="Cdate">
+      		Consigner Name :<input type="text" name="Cname" id="Cname">
+      		
+<button onclick="addHtmlTablerow();">Add</button>
+<button>Edit</button>
+<button>Remove</button>
+
+
+      	</div>
+      </div>
+      <script>
+        
+
+      	// add row
+      	function addHtmlTablerow() {
+
+      		// get the table by id
+      		// create a new row and cells
+      		// get value from input  text
+      		// set the values into row cell's
+
+      	
+      	var table = document.getElementById("table"),
+      	    newRow = table.insertRow(table.length),
+      		cell1 = newRow.insertCell(0),
+      		cell2 = newRow.insertCell(1),
+      		cell3 = newRow.insertCell(2),
+      		
+      		fname = document.getElementById("fname").value,
+      		Cdate = document.getElementById("Cdate").value,
+      	   Cname = document.getElementById("Cname").value,
+           
+cell1.innerHTML = fname;
+cell2.innerHTML = Cdate;
+cell3.innerHTML = Cname; 
+
+// call the fuction to set the event to the new row
+
+
+function selectedRowToInput()
+{
+
+var rIndex,table = document.getElementById("table");
+for(var i = 0; i < table.rows.length; i++)
+{
+	table.rows(i).onclick = function()
+{
+
+// get the selected row index
+  rIndex = this.rowIndex;
+  console.log(rIndex);
+  };
+}
+}
+selectedRowToInput();
+
+      </script>
+</body>
+</html>

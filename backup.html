@@ -1,0 +1,184 @@
+<script>
+            
+            var rIndex,
+                table = document.getElementById("table").innerHTML = window.location.search;
+            
+            // check the empty input
+            function checkEmptyInput()
+            {
+                var isEmpty = false,
+                    fname = document.getElementById("fname").value,
+                    Cdate = document.getElementById("Cdate").value,
+                    Cname = document.getElementById("Cname").value;
+                    Origin = document.getElementById("Origin").value;
+                    CNname = document.getElementById("CNname").value;
+                    Dstn = document.getElementById("Dstn").value;
+                    City = document.getElementById("City").value;
+                    Inumb = document.getElementById("Inumb").value;
+                    pkge = document.getElementById("pkge").value;
+                    Docs = document.getElementById("Docs").value;
+            
+            
+            
+                if(fname === ""){
+                    alert("First Name Connot Be Empty");
+                    isEmpty = true;
+                }
+                else if(Cdate === ""){
+                    alert("Cdate Connot Be Empty");
+                    isEmpty = true;
+                }
+                else if(Cname === ""){
+                    alert("Cname Connot Be Empty");
+                    isEmpty = true;
+                }
+                else if(Origin === ""){
+                    alert("Origin Connot Be Empty");
+                    isEmpty = true;
+                }
+                else if(CNname === ""){
+                    alert("CNname Connot Be Empty");
+                    isEmpty = true;
+                }
+                else if(Dstn === ""){
+                    alert("Dstn Connot Be Empty");
+                    isEmpty = true;
+                }
+                else if(City === ""){
+                    alert("City Connot Be Empty");
+                    isEmpty = true;
+                }
+                else if(Inumb === ""){
+                    alert("Inumb Connot Be Empty");
+                    isEmpty = true;
+                }
+                else if(pkge === ""){
+                    alert("pkge Connot Be Empty");
+                    isEmpty = true;
+                }
+                else if(Docs === ""){
+                    alert("Docs Connot Be Empty");
+                    isEmpty = true;
+                }
+
+                return isEmpty;
+            }
+            
+            // add Row
+            function addHtmlTableRow()
+            {
+                // get the table by id
+                // create a new row and cells
+                // get value from input text
+                // set the values into row cell's
+                if(!checkEmptyInput()){
+                var newRow = table.insertRow(table.length),
+                    cell1 = newRow.insertCell(0),
+                    cell2 = newRow.insertCell(1),
+                    cell3 = newRow.insertCell(2),
+                    cell4 = newRow.insertCell(3),
+                    cell5 = newRow.insertCell(4),
+                    cell6 = newRow.insertCell(5),
+                    cell7 = newRow.insertCell(6),
+                    cell8 = newRow.insertCell(7),
+                    cell9 = newRow.insertCell(8),
+                    cell10 = newRow.insertCell(9),
+
+
+                    fname = document.getElementById("fname").value,
+                    Cdate = document.getElementById("Cdate").value,
+                    Cname = document.getElementById("Cname").value;
+                    Origin = document.getElementById("Origin").value;
+                    CNname = document.getElementById("CNname").value;
+                    Dstn = document.getElementById("Dstn").value;
+                    City = document.getElementById("City").value;
+                    Inumb = document.getElementById("Inumb").value;
+                    pkge = document.getElementById("pkge").value;
+                    Docs = document.getElementById("Docs").value;
+            
+            
+            
+                cell1.innerHTML = fname;
+                cell2.innerHTML = Cdate;
+                cell3.innerHTML = Cname;
+                cell4.innerHTML = Origin;
+                cell5.innerHTML = CNname;
+                cell6.innerHTML = Dstn;
+                cell7.innerHTML = City;
+                cell8.innerHTML = Inumb;
+                cell9.innerHTML = pkge;
+                cell10.innerHTML = Docs;
+
+                // call the function to set the event to the new row
+                selectedRowToInput();
+            }
+            }
+            
+            // display selected row data into input text
+            function selectedRowToInput()
+            {
+                
+                for(var i = 1; i < table.rows.length; i++)
+                {
+                    table.rows[i].onclick = function()
+                    {
+                      // get the seected row index
+                      rIndex = this.rowIndex;
+                      document.getElementById("fname").value = this.cells[0].innerHTML;
+                      document.getElementById("Cdate").value = this.cells[1].innerHTML;
+                      document.getElementById("Cname").value = this.cells[2].innerHTML;
+                      document.getElementById("Origin").value = this.cells[3].innerHTML;
+                       document.getElementById("CNname").value = this.cells[4].innerHTML;
+                       document.getElementById("Dstn").value = this.cells[5].innerHTML;
+                       document.getElementById("City").value = this.cells[6].innerHTML;
+                       document.getElementById("Inumb").value = this.cells[7].innerHTML;
+                       document.getElementById("pkge").value = this.cells[8].innerHTML;
+                       document.getElementById("Docs").value = this.cells[9].innerHTML;
+                    };
+                }
+            }
+            selectedRowToInput();
+            
+            function editHtmlTbleSelectedRow()
+            {
+                var fname = document.getElementById("fname").value,
+                    Cdate = document.getElementById("Cdate").value,
+                    Cname = document.getElementById("Cname").value;
+                    Origin = document.getElementById("Origin").value;
+                    CNname = document.getElementById("CNname").value;
+                    Dstn = document.getElementById("Dstn").value;
+                    City = document.getElementById("City").value;
+                    Inumb = document.getElementById("Inumb").value;
+                    pkge = document.getElementById("pkge").value;
+                    Docs = document.getElementById("Docs").value;
+
+               if(!checkEmptyInput()){
+                table.rows[rIndex].cells[0].innerHTML = fname;
+                table.rows[rIndex].cells[1].innerHTML = Cdate;
+                table.rows[rIndex].cells[2].innerHTML = Cname;
+                table.rows[rIndex].cells[3].innerHTML = Origin;
+                table.rows[rIndex].cells[4].innerHTML = CNname;
+                table.rows[rIndex].cells[5].innerHTML = Dstn;
+                table.rows[rIndex].cells[6].innerHTML = City;
+                table.rows[rIndex].cells[7].innerHTML = Inumb;
+                table.rows[rIndex].cells[8].innerHTML = pkge;
+                table.rows[rIndex].cells[9].innerHTML = Docs;
+              }
+            }
+            
+            function removeSelectedRow()
+            {
+                table.deleteRow(rIndex);
+                // clear input text
+                document.getElementById("fname").value = "";
+                document.getElementById("Cdate").value = "";
+                document.getElementById("Cname").value = "";
+                document.getElementById("Origin").value = "";
+                document.getElementById("CNname").value = "";
+                document.getElementById("Dstn").value = "";
+                document.getElementById("City").value = "";
+                document.getElementById("Inumb").value = "";
+                document.getElementById("pkge").value = "";
+                document.getElementById("Docs").value = "";
+            }
+        </script>

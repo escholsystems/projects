@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<form action="otherpage.html">
+  <input type="hidden" name="varname" value="12345" />
+  <input type="submit" value="Send data">
+</form>
+
+<script language="JavaScript">
+  function processUser()
+  {
+    var parameters = location.search.substring(1).split("&");
+
+    var temp = parameters[0].split("=");
+    l = unescape(temp[1]);
+    temp = parameters[1].split("=");
+    p = unescape(temp[1]);
+    document.getElementById("log").innerHTML = l;
+    document.getElementById("pass").innerHTML = p;
+  }
+</script>
+
+<div id="log"></div>
+<div id="pass"></div>
+
+getElementById("log").innerHTML = login;
