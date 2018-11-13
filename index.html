@@ -50,40 +50,76 @@
 </div>
 </body>
 <style>
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+body {font-family: Arial;}
+
+/* Style the tab */
+.act {
+    overflow: hidden;
+    border: px solid #ccc;
+    background-color: #A52A2A;
 }
-.topnav1 {
-  overflow: hidden;
-  background-color: #A52A2A;
+
+/* Style the buttons inside the tab */
+.act button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 16px 16px;
+    transition: 0.3s;
+    font-size: 17px;
 }
-.topnav1 a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+
+/* Change background color of buttons on hover */
+.act button:hover {
+    background-color: #ddd;
 }
-.topnav1 a:hover {
-  background-color: #ddd;
-  color: black;
+
+/* Create an active/current tablink class */
+.act button.active {
+    background-color: #ccc;
 }
+
+
 </style>
 </head>
 <body>
-<div class="topnav1">
-  <a href="#Add New Shipment">Add New Shipment</a>
-  <a href="action.html">View Shipments</a>
-  <a href="W/O GST">W/O GST</a>
-  <a href="Create Manifest">Create Manifest</a>
-  <a href="View Manifest">View Manifest</a>
-  <a href="Pre-Invoice">Pre-Invoice</a>
-  <a href="List Invoice">List Invoice</a>
-  <a href="Pending POD">Pending POD</a>
-  <a href="View POD">View POD</a>
+
+
+
+<div class="act">
+   <form action="index.html" method="link">
+  <button class="tablinks">add new shipment</button>
+</form>
+<form action="action-page.html" method="link">
+  <button class="tablinks">View Shipments</button>
+</form>
+<form action="action-page1.html" method="link">
+  <button class="tablinks">W/O GST</button>
+</form>
+<form action="action-page2.html" method="link">
+  <button class="tablinks">Create Manifest</button>
+</form>
+  <form action="action-page3.html" method="link">
+  <button class="tablinks">View Manifest</button>
+</form>
+<form action="action-page4.html" method="link">
+    <button class="tablinks">Pre-Invoice</button>
+  </form>
+  <form action="action-page5.html" method="link">
+    <button class="tablinks">List Invoice</button>
+  </form>
+  <form action="action-page6.html" method="link">
+    <button class="tablinks">Pending POD</button>
+  </form>
+  <form action="action-page7.html">
+    <button class="tablinks">View POD</button>
+  </form>
+
+
 </div>
+  </div>
 </body>
     
 
@@ -117,15 +153,12 @@ body {
 
                 <button onclick="saveHtmlTableRow();">Save</button>
               </form>
-                <script>
+                <script src=action-page.html>
                   function saveHtmlTableRow()
             {
-                // get the table by id
-                // create a new row and cells
-                // get value from input text
-                // set the values into row cell's
-                if(checkEmptyInput()){
-                var newRow = table.insertRow(table.length),
+                
+                var table = document.getElementById("table")
+                    newRow = table.insertRow(table.length),
                     cell1 = newRow.insertCell(0),
                     cell2 = newRow.insertCell(1),
                     cell3 = newRow.insertCell(2),
@@ -140,13 +173,13 @@ body {
 
                     fname = document.getElementById("fname").value,
                     Cdate = document.getElementById("Cdate").value,
-                    Cname = document.getElementById("Cname").value;
-                    Origin = document.getElementById("Origin").value;
-                    CNname = document.getElementById("CNname").value;
-                    Dstn = document.getElementById("Dstn").value;
-                    City = document.getElementById("City").value;
-                    Inumb = document.getElementById("Inumb").value;
-                    pkge = document.getElementById("pkge").value;
+                    Cname = document.getElementById("Cname").value,
+                    Origin = document.getElementById("Origin").value,
+                    CNname = document.getElementById("CNname").value,
+                    Dstn = document.getElementById("Dstn").value,
+                    City = document.getElementById("City").value,
+                    Inumb = document.getElementById("Inumb").value,
+                    pkge = document.getElementById("pkge").value,
                     Docs = document.getElementById("Docs").value;
             
             
@@ -162,12 +195,7 @@ body {
                 cell9.innerHTML = pkge;
                 cell10.innerHTML = Docs;
 
-                // call the function to set the event to the new row
-                selectedRowToInput();
-            }
-            }
-            
-            
+                }
     
                 </script>
 
