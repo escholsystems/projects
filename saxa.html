@@ -138,76 +138,29 @@ body {font-family: Arial;}
     </head>
     
             <div class="tab tab-2">
-                <form name="myForm" action="action-page.html" onsubmit="addHtmlTableRow()" method="link">
-                Consignment No :<input type="Number" name="fname" id="fname">
-                Consignment Date :<input type="text" name="Cdate" id="Cdate">
-                Consigner Name :<input type="text" name="Cname" id="Cname">
-                Origin:<input type="text" name="Origin" id="Origin">
-                Consignee Name:<input type="text" name="CNname" id="CNname">
-                Destination:<input type="text" name="Dstn" id="Dstn">
+                <form  name="myForm" action="resaxa.php"
+                onsubmit="return validationForm()" method="post">
+                Consignment No :<input type="Number" name="fname" >
+                Consignment Date :<input type="text" name="Cdate" >
+                Consigner Name :<input type="text" name="Cname" >
+                Origin:<input type="text" name="Origin" >
+                Consignee Name:<input type="text" name="CNname" >
+                Destination:<input type="text" name="Dstn" >
                 City:<input type="text" name="City" id="City">
-                Invoice Number:<input type="Number" name="Inumb" id="Inumb">
-                Package:<input type="text" name="pkge" id="pkge">
-                Docs:<input type="Number" name="Docs" id="Docs">
+                Invoice Number:<input type="Number" name="Inumb" >
+                Package:<input type="text" name="pkge" >
+                Docs:<input type="Number" name="Docs" >
                 <input type="submit" value="save">
-              </form>
-            </div>
-            
-
                 
-                <script>
-    
-                function saveHtmlTableRow()
-            {
-                
-                var table = document.getElementById("table")
-                    newRow = table.insertRow(table.length),
-                    cell1 = newRow.insertCell(0),
-                    cell2 = newRow.insertCell(1),
-                    cell3 = newRow.insertCell(2),
-                    cell4 = newRow.insertCell(3),
-                    cell5 = newRow.insertCell(4),
-                    cell6 = newRow.insertCell(5),
-                    cell7 = newRow.insertCell(6),
-                    cell8 = newRow.insertCell(7),
-                    cell9 = newRow.insertCell(8),
-                    cell10 = newRow.insertCell(9),
+</form>
+<script>
+function validateForm() {
+    var x = document.forms["myForm"]["fname"]["Cdate"] ["Cname"] ["Origin"] ["CNname"] ["Dstn"] ["City"] ["Inumb"] ["pkge"] ["Docs"].value;
+    if (x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+}
+</script>
+</div></html>
 
-
-                    fname = document.getElementById("fname").value,
-                    Cdate = document.getElementById("Cdate").value,
-                    Cname = document.getElementById("Cname").value,
-                    Origin = document.getElementById("Origin").value,
-                    CNname = document.getElementById("CNname").value,
-                    Dstn = document.getElementById("Dstn").value,
-                    City = document.getElementById("City").value,
-                    Inumb = document.getElementById("Inumb").value,
-                    pkge = document.getElementById("pkge").value,
-                    Docs = document.getElementById("Docs").value;
-            
-            
-            
-                cell1.innerHTML = fname;
-                cell2.innerHTML = Cdate;
-                cell3.innerHTML = Cname;
-                cell4.innerHTML = Origin;
-                cell5.innerHTML = CNname;
-                cell6.innerHTML = Dstn;
-                cell7.innerHTML = City;
-                cell8.innerHTML = Inumb;
-                cell9.innerHTML = pkge;
-                cell10.innerHTML = Docs;
-
-                }
-    
-                </script>
-
-
-            
-        </div>
-      
-</div>
-
-</html>
-</body>
-</html>
