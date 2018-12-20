@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!-- JSFormValidation.html -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>HTML Form Input Validation Using JavaScript</title>
+  <link rel="stylesheet" href="i think so.css">
+  <script src="i think so.js"></script>
+</head>
+ 
+<body>
+  <h2>Consigner Details</h2>
+ 
+  <form  method="get" action="action-page.html">
+    <table>
+    <tr>
+      
+      Consignment No :<input type="text" id="txtName" name="Consigner Name"></td>
+      <td id="elmNameError" class="errorMsg">&nbsp;</td></tr>
+    <tr>
+      <td><label for="txtAddress">Consignment Date :</label></td>
+      <td><input type="text" id="txtAddress" name="Consigner Name"></td>
+      <td id="elmAddressError" class="errorMsg">&nbsp;</td></tr>
+    <tr>
+      <td><label for="txtZipcode">Consigner Name :<span class="required"></span></label></td>
+      <td><input type="text" id="txtZipcode" name="Consigner Name"></td>
+      <td id="elmZipcodeError" class="errorMsg">&nbsp;</td></tr>
+    <tr>
+      <td>state :<span class="required"></span></td>
+      <td><select id="selCountry" name="Origin">
+            <option value="" selected>Please select...</option>
+            <option value="AA">AA</option>
+            <option value="BB">BB</option>
+            <option value="CC">CC</option>
+          </select></td>
+      <td id="elmCountryError" class="errorMsg">&nbsp;</td></tr>
+    <tr>
+      <td><label for="txtName">city :<span class="required"></span></label></td>
+      <td><input type="text" id="txtName" name="Consignee Name"></td>
+      <td id="elmNameError" class="errorMsg">&nbsp;</td></tr>
+      
+    <tr>
+      <td><label for="txtName">zipcode :<span class="required"></span></label></td>
+      <td><input type="text" id="txtName" name="Destination"></td>
+      <td id="elmNameError" class="errorMsg">&nbsp;</td></tr>
+
+      <tr>
+      <td>Origin :<span class="required"></span></td>
+      <td><select id="selCountry" name="Origin">
+            <option value="" selected>Please select...</option>
+            <option value="AA">AA</option>
+            <option value="BB">BB</option>
+            <option value="CC">CC</option>
+          </select></td>
+      <td id="elmCountryError" class="errorMsg">&nbsp;</td></tr>
+    
+
+      <td><label for="txtPhone"> mobile number :<span class="required"></span></label></td>
+      <td><input type="text" id="txtPhone" name="phone"></td>
+      <td id="elmPhoneError" class="errorMsg">&nbsp;</td></tr>
+    
+    
+    <tr>
+      <td>&nbsp;</td>
+      <td><input type="submit" value="SEND" id="btnSubmit">&nbsp;
+          <input type="reset" value="CLEAR" id="btnReset"></td>
+      <td>&nbsp;</td></tr>
+    </table>
+  </form>
+</body>
+</html>

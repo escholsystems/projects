@@ -89,6 +89,7 @@ body {font-family: Arial;}
 
 
 <div class="act">
+	 
    <form action="index.html" method="link">
   <button class="tablinks">add new shipment</button>
 </form>
@@ -137,77 +138,118 @@ body {font-family: Arial;}
         
     </head>
     
-            <div class="tab tab-2">
-                <form name="myForm" action="action-page.html" onsubmit="addHtmlTableRow()" method="link">
-                Consignment No :<input type="Number" name="fname" id="fname">
-                Consignment Date :<input type="text" name="Cdate" id="Cdate">
-                Consigner Name :<input type="text" name="Cname" id="Cname">
-                Origin:<input type="text" name="Origin" id="Origin">
-                Consignee Name:<input type="text" name="CNname" id="CNname">
-                Destination:<input type="text" name="Dstn" id="Dstn">
-                City:<input type="text" name="City" id="City">
-                Invoice Number:<input type="Number" name="Inumb" id="Inumb">
-                Package:<input type="text" name="pkge" id="pkge">
-                Docs:<input type="Number" name="Docs" id="Docs">
-                <input type="submit" value="save">
-              </form>
-            </div>
-            
-
-                
-                <script>
     
-                function saveHtmlTableRow()
-            {
+             <div class="tab tab-2">
+             	<p> <label>consignor Details</label></p>
+                <form id="formTest" method="get" action="action-page.html">
+                 <label><b>Consignment No :</b></label>
+                <input type="Number" name="fname" id="fname">
+                <label><b>Consignment Date :</b></label>
+                <input type="text" name="Cdate" id="Cdate">
+                <label><b>Consigner Name :</b></label>
+                <input type="text" name="Cname" id="Cname">
+                <label><b>State :</b></label>
+                <input type="text" name="State" id="State">
+                <label><b>City :</b></label>
+                <input type="text" name="City" id="City">
+                <label><b>Zipcode</b></label>
+                <input type="text" name="Zipcode" id="Zipcode">
+                <label><b>Origin :</b></label>
+                <input type="text" name="Origin" id="Origin">
+                <label><b>Mobile Number :</b></label>
                 
-                var table = document.getElementById("table")
-                    newRow = table.insertRow(table.length),
-                    cell1 = newRow.insertCell(0),
-                    cell2 = newRow.insertCell(1),
-                    cell3 = newRow.insertCell(2),
-                    cell4 = newRow.insertCell(3),
-                    cell5 = newRow.insertCell(4),
-                    cell6 = newRow.insertCell(5),
-                    cell7 = newRow.insertCell(6),
-                    cell8 = newRow.insertCell(7),
-                    cell9 = newRow.insertCell(8),
-                    cell10 = newRow.insertCell(9),
+                <input type="Number" name="Docs" id="Docs">
 
 
-                    fname = document.getElementById("fname").value,
-                    Cdate = document.getElementById("Cdate").value,
-                    Cname = document.getElementById("Cname").value,
-                    Origin = document.getElementById("Origin").value,
-                    CNname = document.getElementById("CNname").value,
-                    Dstn = document.getElementById("Dstn").value,
-                    City = document.getElementById("City").value,
-                    Inumb = document.getElementById("Inumb").value,
-                    pkge = document.getElementById("pkge").value,
-                    Docs = document.getElementById("Docs").value;
+                <style>
             
+            .container{overflow: hidden}
+            .tab{float: left;}
+            .tab-3{margin-left: 200px }
+            .tab-3{margin-top: -470px}
+            .tab-3 input{display: block;margin-bottom: 10px}
+            tr{transition:all .25s ease-in-out}
+            tr:hover{background-color:#EEE;cursor: pointer}
             
-            
-                cell1.innerHTML = fname;
-                cell2.innerHTML = Cdate;
-                cell3.innerHTML = Cname;
-                cell4.innerHTML = Origin;
-                cell5.innerHTML = CNname;
-                cell6.innerHTML = Dstn;
-                cell7.innerHTML = City;
-                cell8.innerHTML = Inumb;
-                cell9.innerHTML = pkge;
-                cell10.innerHTML = Docs;
-
-                }
+        </style>
+        
+    </head>
     
-                </script>
+    
+             <div class="tab tab-3">
+             	<p> <label>consignee Details</label></p>
+                <form id="formTest" method="get" action="action-page.html">
+                 <label><b>Consignee Name :</b></label>
+                <input type="text" name="fname" id="fname">
+                <label><b>Destination:</b></label>
+                <input type="text" name="Cdate" id="Cdate">
+                <label><b>Moblie Number :</b></label>
+                <input type="text" name="Cname" id="Cname">
+                <label><b>State :</b></label>
+                <input type="text" name="State" id="State">
+                <label><b>City :</b></label>
+                <input type="text" name="City" id="City">
+                <label><b>Zipcode</b></label>
+                <input type="text" name="Zipcode" id="Zipcode">
+                <label><b>Invoice Number:</b></label>
+                <input type="text" name="Invoice" id="Invoice">
+                <label><b>Invoice Amount :</b></label>
+                
+                <input type="Number" name="Amount" id="Amount">
 
-
+                <style>
             
-        </div>
-      
+            .container{overflow: hidden}
+            .tab{float: left;}
+            .tab-4{margin-left: 300px }
+            .tab-4{margin-top: -470px}
+            .tab-4 input{display: block;margin-bottom: 10px}
+            tr{transition:all .25s ease-in-out}
+            tr:hover{background-color:#EEE;cursor: pointer}
+            
+        </style>
+        
+    </head>
+    
+    
+             <div class="tab tab-3">
+             	<p> <label>Package Details</label></p>
+                <form id="formTest" method="get" action="action-page.html">
+                 <label><b>No of Pkgs:</b></label>
+                <input type="Number" name="fname" id="fname">
+                <label><b>No of Docs:</b></label>
+                <input type="text" name="Cdate" id="Cdate">
+                <label><b>Weight :</b></label>
+                <input type="text" name="Cname" id="Cname">
+                <label><b>Measurement :</b></label>
+                <input type="text" name="State" id="State">
+                <label><b>Large Box :</b></label>
+                <input type="text" name="City" id="City">
+                <label><b>Medium Box</b></label>
+                <input type="text" name="Zipcode" id="Zipcode">
+                <label><b>Small Box:</b></label>
+                <input type="text" name="Invoice" id="Invoice">
+                <label><b>Total:</b></label>
+                <input type="text" name="Invoice" id="Invoice">
+
+
+              
+           <input type="submit" value="SEND" id="btnSubmit">
+          <input type="reset" value="CLEAR" id="btnReset"></td>         
+    
+ 
+</form>
 </div>
 
+  
+                    
+  </script>
+</div>
 </html>
-</body>
-</html>
+
+            
+
+               
+
+            
+        
